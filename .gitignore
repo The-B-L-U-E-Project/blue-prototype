@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+
+# logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# environment files
+.env
+.env.*
+!.env.example
+
+# build outputs
+dist/
+build/
+coverage/
+.turbo/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# AI
+claude.md
+.claude/
+.superpowers/
+.cursorignore
