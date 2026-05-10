@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <g transform="translate(20, 80)">
+    <!-- Circle with B inside -->
+    <circle r="50" cx="50" cy="40" fill="#0664b5"/>
+    <text x="50" y="40"
+          text-anchor="middle"
+          dominant-baseline="central"
+          font-family="Arial, sans-serif"
+          font-size="62"
+          font-weight="bold"
+          fill="#ffffff">B</text>
+
+    <!-- LUE sits to the right, vertically centred with circle -->
+    <text x="108" y="40"
+          dominant-baseline="central"
+          font-family="Arial, sans-serif"
+          font-size="62"
+          font-weight="bold"
+          fill="#0664b5">LUE</text>
+  </g>
+</svg>
