@@ -8,13 +8,29 @@ Inspired by [Sebastian Rey's idea on The List Podcast](https://www.youtube.com/w
 
 ---
 
+## The Problem
+
+When you're learning how to actually do something online, normal search conventions make learning very fragmented and tedious.
+
+
+| Approach                                | What's missing                                                                                                                                |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| **The open web (search, blogs, video)** | Information is scattered. Niche topics might never surface. Searching requires hopping from site to site                                      |
+| **Wikipedia-style encyclopedias**       | Random facts, so it doesn't necessarily teach you how to do anything.                                                                         |
+| **Light how-to sites**                  | Fine for simple tasks, but sites/guides becomes much more sparse when tasks are harder and more niche.                                        |
+| **Curated free curricula**              | Inconsistent in terms of depthness of information per topic. Some topics get a lot of thoroughness while others do not.                       |
+| **AI chat / search summaries**          | General search and chat assistants' answer quality rely heavily on prompt wording, context limits, and allowed training or retrieval sources. |
+
+
+---
+
 ## The Goal
 
 One site. Any subject. Tutorial-structured. Free forever.
 
 1. **Zero prerequisites** — you can start at the bottom of any topic and progress to the frontier.
-2. **Free and universal** — no paywalls. If it isn't free, the project's vision is compromised.
-3. **Non-scattered, non-biased, tutorial-shaped** — guides build on each other, not random facts.
+2. **Free and universal** — no paywalls. If users have to pay to learn, the project's vision has been compromised.
+3. **Unified, tutorial-shaped progression** — guides build on each other in enforced levels (see Core Design), not a pile of unrelated facts or shallow steps.
 
 ---
 
