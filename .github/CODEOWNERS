@@ -1,0 +1,28 @@
+# CODEOWNERS for BLUE
+#
+# Syntax: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# The user(s) listed below are automatically requested for review on
+# matching PRs. Replace `@your-github-handle` with the real handle(s)
+# once they are known.
+
+# Default fallback — everything not matched below.
+*           @tonylam0
+
+# Governance, licensing, and project-wide policy.
+/LICENSE              @tonylam0
+/LICENSE-CONTENT      @tonylam0
+/CODE_OF_CONDUCT.md   @tonylam0 
+/CONTRIBUTING.md      @tonylam0 
+/GOVERNANCE.md        @tonylam0 
+/SECURITY.md          @tonylam0 
+/CLAUDE.md            @tonylam0 
+/README.md            @tonylam0 
+
+# Workspace areas.
+/api/                 @tonylam0 
+/app/                 @tonylam0 
+/supabase/            @tonylam0 
+
+# CI and repo plumbing.
+/.github/             @tonylam0 

@@ -27,7 +27,7 @@ coverage/
 .idea/
 
 # AI
-claude.md
 .claude/
 .superpowers/
 .cursorignore
+docs/superpowers

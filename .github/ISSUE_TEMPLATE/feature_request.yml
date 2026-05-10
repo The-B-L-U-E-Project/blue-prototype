@@ -1,0 +1,76 @@
+name: Feature request
+description: Propose a new feature, capability, or improvement.
+title: "[Feature] "
+labels:
+  - "enhancement"
+  - "needs-triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the problem first, then the proposal. BLUE
+        is a mission-driven project — see [CLAUDE.md](../blob/main/CLAUDE.md)
+        for the non-negotiable principles. Proposals that violate
+        those principles will not be accepted.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user need or pain point does this address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What do you want to build or change?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches you thought about and why they're worse.
+    validations:
+      required: false
+
+  - type: textarea
+    id: principles
+    attributes:
+      label: Principle alignment
+      description: |
+        How does this proposal align with — or risk violating — the
+        non-negotiable principles and UI design principles in
+        CLAUDE.md? Be specific.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - app (frontend)
+        - api (backend)
+        - supabase / database
+        - verifier system
+        - content pipeline
+        - governance / policy
+        - docs
+        - other
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmations
+      options:
+        - label: I searched existing issues and discussions for prior art.
+          required: true
+        - label: This proposal does not introduce paywalls, non-contextual ads, or engagement-optimized UX.
+          required: true

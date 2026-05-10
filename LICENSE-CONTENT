@@ -1,0 +1,42 @@
+BLUE — Content License
+=======================
+
+This project is dual-licensed:
+
+  - Source code (everything in this repository EXCEPT the items listed
+    below) is licensed under the GNU Affero General Public License,
+    version 3.0 (AGPL-3.0). See the LICENSE file for the full text.
+
+  - User-contributed educational content — including guides, methods,
+    descriptions, illustrations, diagrams, and any other learning
+    material published on the BLUE platform or stored in this
+    repository as content (e.g., under a future `content/` directory) —
+    is licensed under the Creative Commons Attribution-ShareAlike 4.0
+    International License (CC BY-SA 4.0).
+
+You can read the full CC BY-SA 4.0 license here:
+
+    https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+A human-readable summary (not a substitute for the legal text) is at:
+
+    https://creativecommons.org/licenses/by-sa/4.0/
+
+Summary of obligations for content reusers:
+
+  - Attribution: credit the original author(s) and link back to the
+    source on BLUE, and indicate if changes were made.
+
+  - ShareAlike: if you remix, transform, or build upon the content,
+    you must distribute your contributions under the same CC BY-SA 4.0
+    license.
+
+  - No additional restrictions: you may not apply legal terms or
+    technological measures that legally restrict others from doing
+    anything the license permits.
+
+By contributing educational content to BLUE, you agree to license your
+contribution under CC BY-SA 4.0. By contributing source code, you agree
+to license your contribution under AGPL-3.0. See CONTRIBUTING.md for
+details, including the Developer Certificate of Origin (DCO) sign-off
+requirement.
