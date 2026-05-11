@@ -1,18 +1,24 @@
 {
   "name": "api",
   "type": "module",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js"
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types"
   },
   "dependencies": {
-    "@hono/node-server": "^1.19.14",
-    "hono": "^4.12.18"
+    "@hono/zod-validator": "^0.4.3",
+    "@supabase/supabase-js": "^2.105.4",
+    "hono": "^4.12.18",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@types/node": "^20.11.17",
-    "tsx": "^4.7.1",
-    "typescript": "^5.8.3"
+    "@cloudflare/workers-types": "^4.20250508.0",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.14.1"
   }
 }
