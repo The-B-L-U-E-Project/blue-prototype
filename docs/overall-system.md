@@ -60,20 +60,70 @@ When two subjects both tag the same guide and their verifiers disagree on its co
 
 ## Hierarchy (Conceptual)
 
-```
-GUIDES + PREREQUISITE EDGES        (ground truth: one global DAG)
-        │
-        ├──→ Subject tags          (many-to-many; filters, not containers)
-        │       └──→ Subject view  (DAG filtered by tag, depth-ordered)
-        │             └──→ Frontiers list   (leaves of the tagged subgraph)
-        │
-        └──→ Walkthroughs          (materialized prerequisite DAG for a chosen target)
-                └──→ Levels        (per-walkthrough depth from primitives → target)
-                        └──→ Guides
-                                └──→ Methods
+```mermaid
+flowchart TD
+    A["<b>GUIDES + PREREQUISITE EDGES</b><br/>(ground truth: one global DAG)"]
+
+    A --> B["Subject tags<br/><i>many-to-many · filters, not containers</i>"]
+    B --> C["Subject view<br/><i>DAG filtered by tag, depth-ordered</i>"]
+    C --> D["Frontiers list<br/><i>leaves of the tagged subgraph</i>"]
+
+    A --> E["Walkthroughs<br/><i>materialized prereq DAG for a chosen target</i>"]
+    E --> F["Levels<br/><i>per-walkthrough depth: primitives → target</i>"]
+    F --> G["Guides"]
+    G --> H["Methods"]
 ```
 
+
+
 Note: users will usually pick a target from the frontiers list and then materialize a walkthrough, but walkthrough generation is conceptually separate from the frontiers-list view.
+
+## Walkthrough Hierarchy Structure Example
+
+Here is a walkthrough example of liquid-fueled rocket engine design:
+
+```mermaid
+flowchart BT
+    L1["Arithmetic<br/>Level 1 — primitive"]
+
+    L2A["Calculus<br/>Level 2"]
+    L2B["Unit Conversion<br/>Level 2"]
+    L2C["Atomic Structure<br/>Level 2"]
+    L2D["Materials Basics<br/>Level 2"]
+
+    L3A["Thermodynamics<br/>Level 3"]
+    L3B["Chemistry<br/>Level 3"]
+    L3C["Structural Mechanics<br/>Level 3"]
+
+    L4A["Combustion Engineering<br/>Level 4"]
+    L4B["Fluid Dynamics<br/>Level 4"]
+
+    L5["<b>Liquid-Fueled Rocket Engine Design</b><br/>Level 5 — frontier"]
+
+    L1 --> L2A & L2B
+    L2A --> L3A
+    L2B & L2C --> L3B
+    L2D --> L3C
+    L3A & L3B & L3C --> L4A
+    L3B --> L4B
+    L4A & L4B --> L5
+```
+
+
+
+**Key constraints:**
+
+- A guide at level N can only depend on guides at levels < N within the walkthrough. No forward references.
+- Level numbers are computed from the DAG, not declared by authors. The level of a guide = longest prerequisite path to it from a primitive in this walkthrough.
+- Multiple guides at the same level are independent of each other.
+- Guides are shared. "Calculus" at level 2 of this walkthrough is the same node as "Calculus" in any other walkthrough that needs it. No duplication.
+- The frontier is always the sole guide at the highest level. If a chosen target has multiple terminal dependents, the user is asked to pick one.
+
+
+
+**Why this shape matters:**
+
+Learners always know where they are. "I'm at level 3 of 5" is concrete. Each level is a clear milestone: complete all guides at level N, then all guides at level N+1 become unlocked. The hierarchy imposes order without being a rigid linear path — guides at the same level are parallel, not sequential.
 
 ---
 
