@@ -10,16 +10,26 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# environment files
+# environment & local secrets
 .env
 .env.*
 !.env.example
+!.env.*.example
 
-# build outputs
+# Wrangler local secrets (api/)
+.dev.vars
+!.dev.vars.example
+
+# build outputs & caches
 dist/
+dist-ssr/
 build/
 coverage/
 .turbo/
+*.tsbuildinfo
+
+# Cloudflare Workers / Wrangler (api/)
+.wrangler/
 
 # OS / editor
 .DS_Store
