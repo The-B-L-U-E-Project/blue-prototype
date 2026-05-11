@@ -101,7 +101,6 @@ The frontend layout is binding — see the "App Structure" section in
 2. `pnpm -r build` passes.
 3. Manually verify your change in a browser — there is no automated
    test suite. Exercise the golden path and edge cases.
-4. Commit with `-s` for DCO sign-off.
 5. Reference the related issue in the PR description.
 
 ### PR scope

@@ -1,15 +1,12 @@
-import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
+import { cors } from 'hono/cors'
+import { supabaseMiddleware } from './middleware/auth.middleware'
+import type { HonoEnv } from './types'
 
-const app = new Hono()
+const app = new Hono<HonoEnv>()
+  .use((c, next) => cors({ origin: c.env.APP_URL })(c, next))
+  .use(supabaseMiddleware())
+  .get('/', (c) => c.json({ ok: true }))
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
-
-serve({
-  fetch: app.fetch,
-  port: 3000
-}, (info) => {
-  console.log(`Server is running on http://localhost:${info.port}`)
-})
+export default app
+export type AppType = typeof app
