@@ -11,7 +11,7 @@
     "types": "wrangler types"
   },
   "dependencies": {
-    "@hono/zod-validator": "^0.4.3",
+    "@hono/zod-validator": "^0.8.0",
     "@supabase/supabase-js": "^2.105.4",
     "hono": "^4.12.18",
     "zod": "^3.25.76"
