@@ -40,8 +40,8 @@ We welcome:
 - Code: backend (`api/`), frontend (`app/`), infrastructure
 - Documentation improvements
 - Educational guides and methods (once the content pipeline ships)
-- Verifier-system design proposals — this is a hard, unsolved area;
-  thoughtful prior-art writeups are very welcome
+- Verifier and moderator system design proposals — this is a hard,
+  unsolved area; thoughtful prior-art writeups are very welcome
 - Accessibility, internationalization, and low-bandwidth optimizations
   (see UI Design Principles in [CLAUDE.md](CLAUDE.md))
 
@@ -112,15 +112,17 @@ in separate PRs. Drive-by cleanups make review harder.
 
 ## Content contributions (guides, methods)
 
-The content pipeline (hierarchy enforcement, verifier juries, dispute
-resolution) is still being designed — see "Core Mental Model" in
-[CLAUDE.md](CLAUDE.md). Until the in-platform contribution flow exists,
-the canonical place to propose content structure is via issues using
-the "Guide proposal" template.
+The content pipeline (hierarchy enforcement, verifier juries,
+post-publish moderation, dispute resolution) is still being designed —
+see "Core Mental Model" in [CLAUDE.md](CLAUDE.md). Until the
+in-platform contribution flow exists, the canonical place to propose
+content structure is via issues using the "Guide proposal" template.
 
 When the platform is live, guide and method contributions will go
-through the verifier-jury review process described in CLAUDE.md.
-Repository PRs are not the long-term path for content.
+through the verifier-jury pre-publish review process and the
+vote-based post-publish moderation system described in CLAUDE.md and
+`docs/overall-system.md`. Repository PRs are not the long-term path
+for content.
 
 ---
 

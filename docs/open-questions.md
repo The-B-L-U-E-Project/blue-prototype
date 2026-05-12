@@ -10,6 +10,13 @@ Each entry has:
 
 The original mission constraints (free forever, zero prerequisites, one canonical guide, contextual ads only, profit subordinate to mission) live in `CLAUDE.md` and the `README`. Those are non-negotiable. Everything below is.
 
+> **Terminology note.** Sebastian's framing used a single **verifier** role for both pre-publish review and post-publish dispute/oversight. The current system in `[overall-system.md](overall-system.md)` splits these into two roles:
+>
+> - **Verifier** — pre-publish gate. Non-expert, rubric-bound panel, justified in writing.
+> - **Moderator** — post-publish review, re-review panels triggered by the vote+rubric signal, and dispute panels.
+>
+> Where Sebastian's "verifier" refers to post-publish duties below, read it as today's "moderator." Sebastian's takes are preserved verbatim for traceability.
+
 ---
 
 ## 1. Legal, Jurisdictional & Existential
@@ -93,7 +100,7 @@ The original mission constraints (free forever, zero prerequisites, one canonica
 
 - **Q:** How are user-downvote thresholds calibrated so unpopular-but-correct content isn't mob-deleted?
 - **Sebastian's take:** A downvote threshold doesn't unpublish; it routes the guide to a verifier review state. Verifiers check for misinformation. If none, guide stays up; if some, verifiers edit or replace. Specific numbers / time windows: unspecified.
-- **Status:** partial
+- **Status:** **structurally resolved** by `[overall-system.md](overall-system.md)` §"Post-Publish: Vote-Based Verification" — downvotes are rubric-bound (9 categories), public display is totals only, and re-review fires from a moderator panel on a three-path trigger (ratio / rubric-weighted / section-density) with a minimum-vote floor so low-traffic guides cannot be tripped. Concrete thresholds and the minimum-vote floor remain **open**.
 
 ### 3.5 Verifier vs. user conflict
 

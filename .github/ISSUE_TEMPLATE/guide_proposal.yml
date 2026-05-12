@@ -8,10 +8,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        BLUE's content pipeline (verifier juries, hierarchies, methods,
-        disputes) is still being designed. Until the in-platform flow
-        ships, use this template to propose guide structure,
-        prerequisites, and content shape — not to submit final prose.
+        BLUE's content pipeline (verifier juries, post-publish
+        moderation, hierarchies, methods, disputes) is still being
+        designed. Until the in-platform flow ships, use this template
+        to propose guide structure, prerequisites, and content shape —
+        not to submit final prose.
 
         See "Core Mental Model" in [CLAUDE.md](../blob/main/CLAUDE.md)
         for the hierarchy / methods / verifier model.

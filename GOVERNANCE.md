@@ -8,12 +8,13 @@ phase and will evolve as the project grows.
 >
 > 1. **Repository governance** (this document) — how the codebase,
 >    infrastructure, and project direction are managed.
-> 2. **Content governance** — the verifier-jury and dispute system
->    that governs educational guides on the platform.
+> 2. **Content governance** — the verifier (pre-publish) and
+>    moderator (post-publish + disputes) system that governs
+>    educational guides on the platform.
 >
 > The two should remain separate. Repository maintainers do not
-> override verifier decisions on content, and verifiers do not have
-> automatic commit access to the codebase.
+> override verifier or moderator decisions on content, and neither
+> role gets automatic commit access to the codebase.
 
 ---
 
@@ -53,7 +54,7 @@ months no activity) may be moved to an emeritus list.
   (GitHub Discussions or issue) open for at least 72 hours.
 - **Principle-affecting changes** (anything that touches the
   non-negotiable principles in CLAUDE.md, governance, licensing,
-  funding, or the verifier system design): require a documented
+  funding, or the verifier/moderator system design): require a documented
   proposal, public comment period of at least two weeks, and consensus
   of maintainers. The founder retains veto on these during the
   founder-led phase.
@@ -79,7 +80,7 @@ revenue — must be:
 - Mission-aligned: rejected if accepting it would create pressure to
   violate any non-negotiable principle.
 - Separated from editorial: funders and advertisers have zero
-  influence over content, ranking, or verifier decisions.
+  influence over content, ranking, or verifier/moderator decisions.
 
 A formal nonprofit entity will be established before BLUE accepts
 significant external funding or runs production at scale. Jurisdiction

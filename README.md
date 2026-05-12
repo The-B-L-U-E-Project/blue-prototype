@@ -53,22 +53,27 @@ Anyone can spin up a *new* hierarchy if they're proposing a new system (e.g. an 
 - **One canonical guide per topic.** Want to write a new one? Either beat the existing guide or submit edits to it.
 - **Methods sub-articles.** Inside a canonical guide, alternative approaches live as named *methods*. Each method has its own page and is linkable from elsewhere. A method that gains adoption can be promoted to the main approach.
 
-### 3. The Verifier System (WIP idea)
+### 3. The Verifier + Moderator System (WIP idea)
 
-Wikipedia-style open moderation lets bad actors and biased reviewers dominate. Pure expert gatekeeping kills openness. BLUE splits the difference:
+Wikipedia-style open moderation lets bad actors and biased reviewers dominate. Pure expert gatekeeping kills openness. BLUE splits the difference with two distinct community roles, both rubric-bound, panel-based, and required to justify decisions in writing.
 
-- New guides and edits are reviewed by an **odd-numbered random jury of verifiers** drawn from the relevant subject and level.
+**Pre-publish — Verifiers.** New guides and edits go through a verification gate.
+
+- Reviewed by an **odd-numbered random jury of verifiers** drawn from the relevant subject pool.
 - Each review has a **timer** (hours to weeks depending on scope).
-- Majority vote within the timer → publish. Otherwise → back to author.
-- **Every vote requires a written justification.** Verifiers who don't explain risk losing verifier status. The feedback loop is the point.
-- Post-publication, **users upvote/downvote**. Enough downvotes inside a window auto-route the guide back for revision.
+- Verifiers are not required to be subject experts. Their job is structural: check hierarchy soundness, catch obvious errors, prevent duplication, confirm declared-axis claims on competing guides.
+- Discretion is constrained: decisions are rubric-bound, justified in writing, and publicly logged. Verifiers who vote without explanation risk losing the role.
+- Majority approve within the timer → publish. Otherwise → back to author.
 
-**Becoming a verifier:**
+**Post-publish — Moderators + community vote.** Every published guide accumulates upvotes and downvotes from learners.
 
-- Subject- and level-specific testing.
-- Higher levels → stricter tests, especially for niche/theoretical content.
-- Open question: do high-level verifiers automatically inherit lower-level voting rights, or must every level be tested independently? Both are viable; pick per subject.
-- Multi-subject verifiers are allowed (think double major).
+- Upvote is a single click, no input required.
+- **Downvote requires a rubric reason** from a fixed list (Unclear, Factually wrong, Missing step, Outdated, Broken link or asset, Prereq gap, Wrong level, Better method exists, Scope creep). An optional section pointer and free-form text can be attached.
+- The public sees totals only. The per-rubric and per-section breakdown is moderator-only — both for signal precision and to make brigade detection harder to game.
+- A re-review by a moderator panel fires when any of three trigger paths cross threshold (overall downvote ratio, rubric-weighted severity, or section-density flagging), with a minimum-vote floor so low-traffic guides cannot be tripped by a handful of votes.
+- Moderators also sit on dispute panels.
+
+**Credentialing.** Subject-expert credentialing for verifiers and moderators is deferred. Both roles as currently defined are structural-rubric jobs that do not require subject expertise, which also makes the roles recruitable in parallel with authors during cold start. Multi-subject participation is allowed.
 
 ### 4. Funding: Contextual Advertising Only
 
@@ -89,7 +94,7 @@ Sketch of the system:
 
 - **Standing required** to open a dispute. Repeat spammers get flagged by auditors and rate-limited or banned from opening new ones.
 - **All votes are odd-numbered.** Even-tied panels auto-eject one member to break ties.
-- **Spin-off resolution** for cross-niche disagreement: when two niches' verifiers disagree on a shared guide, fork it into two niche-specific versions. Breaks the consolidation rule on purpose, as a release valve.
+- **Spin-off resolution** for cross-niche disagreement: when two subject communities disagree on a shared guide, fork it into two niche-specific versions. Breaks the consolidation rule on purpose, as a release valve.
 - **Resolution authority depends on the dispute type.** Hierarchy fights → hierarchy maintainers + a neutral auditor. Vote fights → an independent dispute board to avoid conflicts of interest.
 
 ---
@@ -109,4 +114,4 @@ Legal scaffolding has to come *before* the site does.
 
 ## Contributing
 
-Open. Issues, PRs, and design challenges to the verifier / hierarchy / dispute systems are all welcome.
+Open. Issues, PRs, and design challenges to the verifier / moderator / hierarchy / dispute systems are all welcome.
