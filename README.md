@@ -48,10 +48,10 @@ Every guide lives at a **level** in a subject's hierarchy.
 
 Anyone can spin up a *new* hierarchy if they're proposing a new system (e.g. an alternative math). It just has to be structured the same way: simplest concepts at the bottom, building up.
 
-### 2. One Guide Per Topic + Methods
+### 2. One Guide Per Topic + Methods & Alternatives
 
 - **One canonical guide per topic.** Want to write a new one? Either beat the existing guide or submit edits to it.
-- **Methods sub-articles.** Inside a canonical guide, alternative approaches live as named *methods*. Each method has its own page and is linkable from elsewhere. A method that gains adoption can be promoted to the main approach.
+- **Methods and alternatives as sub-articles.** Inside a canonical guide, competing *practice* routes live as named *methods*, and competing *theoretical* framings live as *alternatives*. Each has its own page and is linkable from elsewhere. **Upvotes and downvotes** rank sibling methods and alternatives automatically; strong sustained preference can promote one to the main approach.
 
 ### 3. The Verifier + Moderator System (WIP idea)
 
@@ -61,14 +61,14 @@ Wikipedia-style open moderation lets bad actors and biased reviewers dominate. P
 
 - Reviewed by an **odd-numbered random jury of verifiers** drawn from the relevant subject pool.
 - Each review has a **timer** (hours to weeks depending on scope).
-- Verifiers are not required to be subject experts. Their job is structural: check hierarchy soundness, catch obvious errors, prevent duplication, confirm declared-axis claims on competing guides.
+- Verifiers are not required to be subject experts. Their job is structural: check hierarchy soundness, catch obvious errors, prevent duplication, and apply the same checks to new methods and alternatives under a parent guide.
 - Discretion is constrained: decisions are rubric-bound, justified in writing, and publicly logged. Verifiers who vote without explanation risk losing the role.
 - Majority approve within the timer → publish. Otherwise → back to author.
 
 **Post-publish — Moderators + community vote.** Every published guide accumulates upvotes and downvotes from learners.
 
 - Upvote is a single click, no input required.
-- **Downvote requires a rubric reason** from a fixed list (unclear, factually wrong, missing step, outdated, broken link or asset, prereq gap, wrong level, better method exists, scope creep). An optional section pointer and free-form text can be attached.
+- **Downvote requires a rubric reason** from a fixed list (unclear, factually wrong, missing step, outdated, broken link or asset, prereq gap, wrong level, scope creep). An optional section pointer and free-form text can be attached. Preferring a different approach is expressed by voting on **methods and alternatives**, not by misusing the canonical-guide rubric.
 - The public sees totals only. The per-rubric and per-section breakdown is moderator-only.
 - A re-review by a moderator panel fires when any of three trigger paths cross threshold (overall downvote ratio, rubric-weighted severity, or section-density flagging), with a minimum-vote floor so low-traffic guides cannot be tripped by a handful of votes.
 - Moderators also sit on dispute panels.

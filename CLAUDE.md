@@ -25,7 +25,7 @@ The README has the full public write-up. This file captures the *intent* and the
 - **Shallow or inconsistent how-to curricula.** Lightweight how-to hubs cap depth on hard skills ("go to school / hire a professional"). Broad free curricula are uneven: strong where a small team invested, thin or absent for highly specific or frontier procedures.
 - **Search and AI as partial substitutes.** General search and chat assistants depend on query wording, context limits, and allowed training or retrieval sources; they do not provide a single, audited, site-native hierarchy from level 1 to the frontier, or a durable canonical guide per topic with explicit governance.
 
-**BLUE's wedge:** one place, **tutorial-shaped** (not fact-only), **hierarchically enforced prerequisites**, **one canonical guide per topic** with **methods** for alternatives, **community contribution** with **verifier juries**—so a learner can climb from zero to arbitrarily deep, niche, practical knowledge without assembling the internet by hand.
+**BLUE's wedge:** one place, **tutorial-shaped** (not fact-only), **hierarchically enforced prerequisites**, **one canonical guide per topic** with **methods** (practice) and **alternatives** (theoretical) for competing framings, **community contribution** with **verifier juries**—so a learner can climb from zero to arbitrarily deep, niche, practical knowledge without assembling the internet by hand.
 
 ---
 
@@ -35,7 +35,7 @@ These are load-bearing. If a proposal violates one of these, push back rather th
 
 1. **Free forever.** No paywalls, no premium tiers, no "freemium." If users have to pay to learn, the project has failed its purpose.
 2. **Zero prerequisites at every level.** A reader starting at level 1 of any subject must be able to climb to the frontier without leaving the site. Every level-N guide must be completable using only content at level <N.
-3. **One canonical guide per topic.** No duplicate articles. Alternatives live as *methods* inside the canonical guide.
+3. **One canonical guide per topic.** No duplicate articles. Competing practice routes live as *methods* and competing theoretical framings live as *alternatives* inside the canonical guide.
 4. **Tutorial-shaped, not fact-shaped.** Content teaches you to *do* things. If a guide reads like a Wikipedia article, it's wrong.
 5. **Contextual ads only.** Advertising is allowed *only* on guides directly related to the product/service. No site-wide banners. No off-topic placements. No advertiser influence on content or ranking.
 6. **Profit must not become the priority.** Sustainability is fine. Optimizing the site for revenue ahead of the mission breaks it.
@@ -78,11 +78,11 @@ Three interlocking systems define the product. Most design decisions trace back 
 - New hierarchies can be created for new systems (e.g. an alternative math), as long as they follow the same shape.
 - Every level-N guide must be completable using only level <N content. No skipped steps. A reader starting at level 1 can climb all the way up without external prerequisites.
 
-### Methods
+### Methods & alternatives
 
-- Inside a canonical guide, alternative approaches live as *methods*.
-- Each method has its own page and is linkable.
-- Adoption can promote a method to the main approach.
+- Inside a canonical guide, competing *practice* routes live as *methods*; competing *theoretical* framings live as *alternatives*.
+- Each method or alternative has its own page and is linkable.
+- Community **upvotes and downvotes** rank sibling methods and alternatives; sustained preference can promote one to the main approach.
 
 ### Verifier System
 

@@ -11,7 +11,7 @@ This document covers:
 - [What kinds of contributions](#what-kinds-of-contributions)
 - [Reporting bugs and proposing features](#reporting-bugs-and-proposing-features)
 - [Code contributions](#code-contributions)
-- [Content contributions (guides, methods)](#content-contributions-guides-methods)
+- [Content contributions (guides, methods, alternatives)](#content-contributions-guides-methods-alternatives)
 - [Code of conduct](#code-of-conduct)
 - [Security issues](#security-issues)
 
@@ -23,7 +23,7 @@ BLUE is dual-licensed:
 
 - **Source code:** [AGPL-3.0](LICENSE) — copyleft for networked services.
   Forks hosted as a service must publish their source.
-- **Educational content** (guides, methods, illustrations):
+- **Educational content** (guides, methods, alternatives, illustrations):
   [CC BY-SA 4.0](LICENSE-CONTENT) — attribution + share-alike.
 
 By submitting a contribution, you agree that your work is licensed under
@@ -39,7 +39,7 @@ We welcome:
 - Feature proposals (please open an issue to discuss before large PRs)
 - Code: backend (`api/`), frontend (`app/`), infrastructure
 - Documentation improvements
-- Educational guides and methods (once the content pipeline ships)
+- Educational guides, methods, and alternatives (once the content pipeline ships)
 - Verifier and moderator system design proposals — this is a hard,
   unsolved area; thoughtful prior-art writeups are very welcome
 - Accessibility, internationalization, and low-bandwidth optimizations
@@ -110,7 +110,7 @@ in separate PRs. Drive-by cleanups make review harder.
 
 ---
 
-## Content contributions (guides, methods)
+## Content contributions (guides, methods, alternatives)
 
 The content pipeline (hierarchy enforcement, verifier juries,
 post-publish moderation, dispute resolution) is still being designed —
@@ -118,7 +118,7 @@ see "Core Mental Model" in [CLAUDE.md](CLAUDE.md). Until the
 in-platform contribution flow exists, the canonical place to propose
 content structure is via issues using the "Guide proposal" template.
 
-When the platform is live, guide and method contributions will go
+When the platform is live, guide, method, and alternative contributions will go
 through the verifier-jury pre-publish review process and the
 vote-based post-publish moderation system described in CLAUDE.md and
 `docs/overall-system.md`. Repository PRs are not the long-term path

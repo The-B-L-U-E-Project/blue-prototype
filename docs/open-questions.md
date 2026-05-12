@@ -374,7 +374,7 @@ Sebastian flagged these as "Other Possible Additions" — none have detailed des
 - "A Guide to Writing Guides" — for content creators; differentiates Theory vs. Practice; explains hierarchy linkage; covers dispute policy; emphasizes clarity, accuracy, consolidation, elimination of redundancy and trivial content
 - Starter Guide — for readers; teaches how the BLUE system itself works
 - 3D model / graph visualization application embeddable inside guides
-- Practice-guide "Priority" labels (Gas Efficiency vs. Cheapness vs. ...) to differentiate methods by what they optimize; potentially its own filterable category
+- Practice-guide "Priority" labels (Gas Efficiency vs. Cheapness vs. ...) to differentiate *methods* by what they optimize; analogous dimensions for *alternatives* on more theoretical guides; potentially its own filterable category
 - "Bird's Eye" — single visualizer of every hierarchy and guide
 - Recent Changes feed (Wikipedia-style), with filter
 - Notifications / Alerts system

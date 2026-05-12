@@ -21,9 +21,10 @@ This is what lets BLUE fit any kind of knowledge: a guide can have many prerequi
 - **Walkthrough**: A materialized part of the graph: pick a target guide, compute its transitive prerequisite DAG, optionally filter by subject tag, render bottom-up. Most walkthroughs are auto-generated on demand from a chosen target. Users should also be able to save these walkthroughs locally.
 - **Hierarchy**: The leveled shape of a walkthrough. Guides are grouped into levels where every guide at level N depends only on guides at levels below N. Guides at the same level are independent of each other and can be completed in any order.
 - **Level**: A computed depth position within a walkthrough (level 1 = primitives with no prereqs in this walkthrough; highest level = frontier). The level of a guide = longest prerequisite path to it from a primitive in this walkthrough. Per-walkthrough only — the same guide can sit at different levels in different walkthroughs depending on what else is included.
-- **Method**: An alternative approach to the same task inside a guide. Methods live inside their parent guide, each with its own page and URL. If a method becomes dominant via adoption, it can be promoted to the main guide content.
-- **Modifications**: Edits to a guide or method.
-- **Verifier**: A community member authorized to review guide submissions and modifications before publish. Verifiers are not required to be subject experts; their job is to check hierarchy soundness, catch obvious errors, prevent duplication, and confirm declared-axis claims on competing guides. Verifier discretion is deliberately constrained: decisions are rubric-bound, panel-based, justified in writing, and publicly logged. See the Guide Creation & Verification section below.
+- **Alternative**: A competing *theoretical* framing of the same topic inside a canonical guide (e.g. a different model, proof strategy, or conceptual lens). Alternatives live inside their parent guide, each with its own page and URL. Learner **upvotes and downvotes** rank alternatives against each other; strong sustained preference can promote one to the main guide content.
+- **Method**: A competing *practice* route to the same outcome inside a canonical guide (e.g. a different procedure, toolchain, or technique). Methods live inside their parent guide, each with its own page and URL. Learner **upvotes and downvotes** rank methods against each other; strong sustained preference can promote one to the main guide content.
+- **Modifications**: Edits to a guide, method, or alternative.
+- **Verifier**: A community member authorized to review guide submissions and modifications before publish. Verifiers are not required to be subject experts; their job is to check hierarchy soundness, catch obvious errors, prevent duplication, and apply the same structural checks to new methods and alternatives parented under a guide. Verifier discretion is deliberately constrained: decisions are rubric-bound, panel-based, justified in writing, and publicly logged. See the Guide Creation & Verification section below.
 - **Moderator**: A community member who handles post-publish guide review. Moderators see the full vote-rubric breakdown (both whole-guide and per-section), sit on re-review panels when a guide trips a re-review trigger, and sit on dispute panels. Moderator panels are odd-numbered, randomly drawn from the eligible pool, rubric-bound, and require written justifications on the same discipline as verifier panels. Subject-expert credentialing for moderators (and verifiers) is layered on later as the verifier-style credentialing system comes online.
 
 ## Discovery Flow
@@ -72,7 +73,7 @@ flowchart TD
     A --> E["Walkthroughs<br/><i>materialized prereq DAG for a chosen target</i>"]
     E --> F["Levels<br/><i>per-walkthrough depth: primitives → target</i>"]
     F --> G["Guides"]
-    G --> H["Methods"]
+    G --> H["Methods & alternatives"]
 ```
 
 
@@ -134,25 +135,14 @@ What "verified" means here is narrowed to the two properties that are load-beari
 
 ### Submission Paths
 
-When a user wants to contribute a guide, exactly one of two paths applies:
+When a user wants to contribute:
 
-1. **No existing guide on the topic.** The user authors a fresh guide. Standard verifier queue.
-2. **A guide already exists on the topic.** The user must either:
-  - **Modify the existing guide** (diff-style edits, reviewed by verifiers), or
-  - **Submit a competing guide** with a declared improvement axis. Without a declared axis, the submission is rejected as a duplicate.
+1. **No canonical guide on the topic yet.** The user authors a fresh guide. Standard verifier queue.
+2. **A canonical guide already exists.** The user may:
+   - **Modify the canonical guide** (diff-style edits, reviewed by verifiers), or
+   - **Add a method or alternative** under that guide: *methods* for a different practice route to the same outcome, *alternatives* for a different theoretical framing. New methods and alternatives go through the same verifier gate as other new pages.
 
-Methods (alternative approaches inside a guide) are the preferred resolution when two submissions reach the same outcome by different routes. A competing-guide submission should only be used when the existing canonical guide is wrong, outdated, or misscoped.
-
-### Declared Improvement Axes for Competing Guides
-
-When submitting a competing guide, the author must claim improvement along at least one of these axes. Verifiers evaluate the submission against the declared claim, not against vague "better."
-
-- **Outcome rate** — the existing guide has documented failure clusters; the new guide claims to fix them.
-- **Prereq accuracy** — the existing guide assumes knowledge it shouldn't (skipped steps, wrong level placement); the new guide fixes the hierarchy.
-- **Outdated method** — the existing guide teaches a deprecated tool, library, technique, or standard; the new guide uses current practice.
-- **Coverage gap** — the existing guide misses a common edge case, failure mode, or method variant.
-- **Clarity** — the existing guide is technically correct but unfollowable for the intended level. This is the weakest claim and the most subjective; verifiers should scrutinize it hardest.
-- **Scope correction** — the existing guide combines two topics or splits one that should be unified.
+Disagreement with the main write-up or preference for another approach is handled by **authoring a method or alternative**. After publish, **upvotes and downvotes on each method and alternative automatically move them up or down** in ordering relative to siblings. If wide adoption occurs, alternatives/methods can promote to become the main guide.
 
 ### Authoring
 
@@ -165,7 +155,7 @@ This lets authors write at any level without having to teach every primitive bel
 
 ### Verification Gate (Pre-Publish)
 
-Every submission (fresh guide, modification, or competing guide) passes through a verifier queue before publishing. Verifiers are not required to be subject experts. The role is staffed by careful readers willing to apply consistent structural and editorial standards.
+Every submission (fresh guide, modification, new method, or new alternative) passes through a verifier queue before publishing. Verifiers are not required to be subject experts. The role is staffed by careful readers willing to apply consistent structural and editorial standards.
 
 Verifier checks include, at minimum:
 
@@ -173,7 +163,6 @@ Verifier checks include, at minimum:
 - **Obvious errors.** Broken steps, unreachable outcomes, missing inputs, contradictions.
 - **Duplication.** Combined with autocomplete search at title entry and similarity-warning at submit, verifiers do the final duplicate check.
 - **Scope.** The guide covers exactly one topic and does not silently merge two.
-- **Declared-axis verification** (for competing guides). The author's claim is structurally verifiable without a vague argument/justification.
 - **Other verification responsibilities** as the verifier role evolves.
 
 Verifier decisions: **publish provisionally**, or **return to author with notes**. This is a fast, imperfect gate by design. It catches things automation misses (judgment, context, tone) while not requiring subject expertise. Verifier authority is bounded by the conduct rules in the next section.
@@ -182,14 +171,14 @@ Verifier decisions: **publish provisionally**, or **return to author with notes*
 
 Verifier review is a known attack surface. Wikipedia demonstrates that unchecked reviewer discretion lets biased or malicious reviewers shape content under the cover of "review." BLUE addresses this structurally: discretion is constrained, not trusted. Four mechanisms apply.
 
-**1. Rubric-bound decisions.** Verifiers may reject only against named rubric items. The rubric is the union of the checks listed in "Verification Gate" above (hierarchy soundness, obvious errors, duplication, scope, declared-axis verification for competing guides, and any future named criteria added by governance). A rejection that does not cite a specific rubric item is not a valid rejection. Phrases like "I don't like it," "this isn't how I would write it," or "I disagree with the method" are not rubric items and cannot ground a rejection.
+**1. Rubric-bound decisions.** Verifiers may reject only against named rubric items. The rubric is the union of the checks listed in "Verification Gate" above (hierarchy soundness, obvious errors, duplication, scope, and any future named criteria added by governance). A rejection that does not cite a specific rubric item is not a valid rejection. Phrases like "I don't like it," "this isn't how I would write it," or "I disagree with the method or alternative" are not rubric items and cannot ground a rejection.
 
 **2. Explicit out-of-scope criteria.** Verifiers must not factor in any of the following. Doing so constitutes verifier misconduct and is appealable.
 
 - Stylistic preference unrelated to the clarity rubric.
 - Political, cultural, religious, or ideological angle.
 - The author's identity, reputation, or prior submissions.
-- Method preference, where the submission is a competing guide on the `clarity` axis or a method addition inside a guide.
+- Ordering preference among methods or alternatives (which approach should rank higher). Community votes determine rank after publish; verifiers do not pick winners among approaches.
 - Personal disagreement with a factual claim. Factual disputes go through the dispute system, not the verification gate.
 
 **3. Panel review, not single verifier.** Each submission is reviewed by an odd-numbered random panel drawn from the verifier pool. Majority decision controls. Each panel member submits an independent written justification that cites the rubric item invoked. Silent votes, templated justifications, and justifications without a rubric citation are flagged and feed into verifier-status review.
@@ -198,9 +187,11 @@ Verifier review is a known attack surface. Wikipedia demonstrates that unchecked
 
 ### Post-Publish: Vote-Based Verification
 
-Once published, every guide accumulates **upvotes** and **downvotes** from learners. Upvote takes a single click and requires no further input. **Downvote requires a rubric reason.**
+Once published, every **guide, method, and alternative** accumulates **upvotes** and **downvotes** from learners. Upvote takes a single click and requires no further input. **Downvote requires a rubric reason** (on guides; methods and alternatives use the same rubric unless governance adds lighter-weight rules for sub-pages).
 
-**Downvote rubric.** The voter must pick exactly one of:
+Votes on **methods and alternatives** feed an automatic **ordering** among siblings under the same parent guide: higher net preference surfaces an approach; low preference sinks it. That ordering is how the community expresses "which approach works better here," separate from the verifier gate.
+
+**Downvote rubric (canonical guide).** The voter must pick exactly one of:
 
 1. **Unclear** — could not follow.
 2. **Factually wrong** — claim is incorrect.
@@ -209,8 +200,9 @@ Once published, every guide accumulates **upvotes** and **downvotes** from learn
 5. **Broken link or asset** — link dead or media unavailable.
 6. **Prereq gap** — assumes knowledge above the guide's declared level.
 7. **Wrong level** — too easy or too hard for the declared level.
-8. **Better method exists** — alternative method works better here. Routes the suggestion into the methods system.
-9. **Scope creep** — covers material outside the topic.
+8. **Scope creep** — covers material outside the topic.
+
+If the reader prefers a different practice route or theoretical framing, they should use votes on the relevant **method or alternative** pages (or author one if it does not exist yet), not use the canonical-guide downvote rubric as a stand-in for approach preference.
 
 Optional alongside the rubric reason: a **section pointer** (dropdown of the guide's headers; skipping yields a whole-guide flag) and optional free-form text. Future UX implementation includes downvote reason specific actions (e.g. broken link requires user to specifically point which link they are referring to).
 
@@ -221,7 +213,7 @@ Optional alongside the rubric reason: a **section pointer** (dropdown of the gui
 - The author's identity.
 - Personal disagreement with a factual claim without supporting evidence. Route to the dispute system instead.
 
-**Public display.** Each guide shows upvote/downvote totals only with no rubric breakdown and no section-level badges visible to readers. 
+**Public display.** Each guide and each method or alternative page shows upvote/downvote totals only with no rubric breakdown and no section-level badges visible to readers.
 
 **Moderator display.** Moderators (and verifiers with reading access, where applicable) see the full rubric breakdown at both whole-guide and per-section granularity. This is what panels use to decide re-review action: edit, demote to author, route to dispute, or dismiss as brigade.
 
@@ -247,7 +239,6 @@ Possible dispute triggers in the model:
 
 - A **factual disagreement** where a user can produce evidence a guide's claim is wrong. Downvotes can flag the issue but cannot resolve it; dispute panels do.
 - A **cross-niche conflict** where two subject communities disagree on a shared guide. Resolution may be a spin-off (see Cross-Subject Conflicts above).
-- A **competing-guide rejection** the author wants to contest.
-- A **verification gate decision appeal** — the author contests a pre-publish rejection (see Verifier Conduct & Bias Prevention above).
+- A **verification gate decision appeal** — the author contests a pre-publish rejection, including of a new method or alternative (see Verifier Conduct & Bias Prevention above).
 - A **post-publish re-review outcome appeal** — the author contests a moderator panel decision to demote, edit, or route their guide back.
 
