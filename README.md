@@ -68,12 +68,12 @@ Wikipedia-style open moderation lets bad actors and biased reviewers dominate. P
 **Post-publish — Moderators + community vote.** Every published guide accumulates upvotes and downvotes from learners.
 
 - Upvote is a single click, no input required.
-- **Downvote requires a rubric reason** from a fixed list (Unclear, Factually wrong, Missing step, Outdated, Broken link or asset, Prereq gap, Wrong level, Better method exists, Scope creep). An optional section pointer and free-form text can be attached.
-- The public sees totals only. The per-rubric and per-section breakdown is moderator-only — both for signal precision and to make brigade detection harder to game.
+- **Downvote requires a rubric reason** from a fixed list (unclear, factually wrong, missing step, outdated, broken link or asset, prereq gap, wrong level, better method exists, scope creep). An optional section pointer and free-form text can be attached.
+- The public sees totals only. The per-rubric and per-section breakdown is moderator-only.
 - A re-review by a moderator panel fires when any of three trigger paths cross threshold (overall downvote ratio, rubric-weighted severity, or section-density flagging), with a minimum-vote floor so low-traffic guides cannot be tripped by a handful of votes.
 - Moderators also sit on dispute panels.
 
-**Credentialing.** Subject-expert credentialing for verifiers and moderators is deferred. Both roles as currently defined are structural-rubric jobs that do not require subject expertise, which also makes the roles recruitable in parallel with authors during cold start. Multi-subject participation is allowed.
+Subject-expert credentialing for verifiers and moderators is deferred. Both roles as currently defined are structural-rubric jobs that do not require subject expertise, which also makes the roles recruitable in parallel with authors during cold start. Multi-subject participation is allowed.
 
 ### 4. Funding: Contextual Advertising Only
 
