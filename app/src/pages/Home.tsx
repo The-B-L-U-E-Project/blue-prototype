@@ -59,7 +59,6 @@ const features = [
   },
 ]
 
-const NAV_LINK = 'text-sm text-[#374151] hover:text-[#111827] transition-colors no-underline'
 const SECTION_LINK = 'text-xs text-[#374151] hover:text-[#111827] hover:underline no-underline transition-colors'
 
 export default function Home() {
@@ -115,7 +114,7 @@ export default function Home() {
           </p>
 
           {/* Search bar — no dropdown */}
-          <div className="flex items-stretch border border-[#D1D5DB] rounded shadow-sm bg-white overflow-hidden mb-5">
+          <div className="flex items-stretch border border-[#D1D5DB] rounded bg-white overflow-hidden mb-5">
             <input
               value={query}
               onChange={e => setQuery(e.target.value)}
@@ -244,7 +243,7 @@ export default function Home() {
           </nav>
           <p className="text-xs text-[#6B7280]">
             This work is licensed under{' '}
-            <a href="https://creativecommons.org/licenses/by-sa/4.0/" className="text-[#374151] underline hover:underline">CC BY-SA 4.0</a>.
+            <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" className="text-[#374151] underline hover:underline">AGPL-3.0</a>.
           </p>
         </div>
       </footer>
