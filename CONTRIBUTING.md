@@ -22,9 +22,9 @@ This document covers:
 BLUE is dual-licensed:
 
 - **Source code:** [AGPL-3.0](LICENSE) — copyleft for networked services.
-  Forks hosted as a service must publish their source.
+Forks hosted as a service must publish their source.
 - **Educational content** (guides, methods, alternatives, illustrations):
-  [CC BY-SA 4.0](LICENSE-CONTENT) — attribution + share-alike.
+[CC BY-SA 4.0](LICENSE-CONTENT) — attribution + share-alike.
 
 By submitting a contribution, you agree that your work is licensed under
 the applicable license above and that you have the right to submit it.
@@ -41,18 +41,17 @@ We welcome:
 - Documentation improvements
 - Educational guides, methods, and alternatives (once the content pipeline ships)
 - Verifier and moderator system design proposals — this is a hard,
-  unsolved area; thoughtful prior-art writeups are very welcome
+unsolved area; thoughtful prior-art writeups are very welcome
 - Accessibility, internationalization, and low-bandwidth optimizations
-  (see UI Design Principles in [CLAUDE.md](CLAUDE.md))
+(see UI Design Principles in [CLAUDE.md](CLAUDE.md))
 
 Please **do not** submit:
 
 - Proposals that introduce paywalls, premium tiers, or non-contextual
-  advertising. These violate the project's load-bearing principles
-  (see [CLAUDE.md](CLAUDE.md) "Non-Negotiable Principles").
-- Content scraped from sources that are not compatibly licensed
-  (CC BY-SA 4.0 compatible or your own original work).
-- Engagement-optimized UX patterns (streaks, XP, dark patterns).
+advertising. These violate the project's load-bearing principles
+(see [CLAUDE.md](CLAUDE.md) "Non-Negotiable Principles").
+- Content scraped from sources that are not compatibly licensed  
+(CC BY-SA 4.0 compatible or your own original work).
 
 ---
 
@@ -61,7 +60,7 @@ Please **do not** submit:
 - Search [existing issues](../../issues) first to avoid duplicates.
 - Use the issue templates in `.github/ISSUE_TEMPLATE/`.
 - For security issues, **do not open a public issue**. See
-  [SECURITY.md](SECURITY.md).
+[SECURITY.md](SECURITY.md).
 
 ---
 
@@ -86,22 +85,22 @@ The frontend layout is binding — see the "App Structure" section in
 [CLAUDE.md](CLAUDE.md). In short:
 
 - Path alias `@/` maps to `src/`. Always import via `'@/ui'`, not
-  `'../../../ui'`.
+`'../../../ui'`.
 - `ui/` is pure presentational primitives. No fetching, no RPC, no
-  business logic.
+business logic.
 - `features/<surface>/` may import `@/ui`, `@/api`, `@/lib`. Must not
-  import from another `features/` folder.
+import from another `features/` folder.
 - `routes/` files are thin: call hooks, lay out feature components.
 - Tailwind v4 (no `tailwind.config.js`); design tokens in `index.css`
-  via `@theme`.
+via `@theme`.
 
 ### Before opening a PR
 
 1. `pnpm -r typecheck` (or `tsc --noEmit`) passes.
 2. `pnpm -r build` passes.
 3. Manually verify your change in a browser — there is no automated
-   test suite. Exercise the golden path and edge cases.
-5. Reference the related issue in the PR description.
+  test suite. Exercise the golden path and edge cases.
+4. Reference the related issue in the PR description.
 
 ### PR scope
 
