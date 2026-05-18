@@ -1,6 +1,7 @@
 import { Search, BookOpen, ShieldCheck, Share2, Users } from 'lucide-react'
 import { useState } from 'react'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 const subjects = [
   { name: 'Mathematics', count: '2,842 guides' },
@@ -199,20 +200,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-5 px-6 bg-white">
-        <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4">
-          <nav className="flex flex-wrap gap-5">
-            {['About BLUE', 'How it works', 'Verification', 'Policies', 'Contact'].map(link => (
-              <a key={link} href="#" className="text-xs text-[#6B7280] hover:text-[#111827] hover:underline transition-colors">{link}</a>
-            ))}
-          </nav>
-          <p className="text-xs text-[#6B7280]">
-            This work is licensed under{' '}
-            <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" className="text-[#374151] underline hover:underline">AGPL-3.0</a>.
-          </p>
-        </div>
-      </footer>
+      <Footer />
 
     </div>
   )
