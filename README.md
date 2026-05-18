@@ -45,13 +45,15 @@ supabase start
 Run the API (Cloudflare Workers dev server):
 
 ```bash
-pnpm --filter api dev
+cd api
+pnpm dev
 ```
 
 Run the frontend (Vite):
 
 ```bash
-pnpm --filter app dev
+cd app
+pnpm dev
 ```
 
 App defaults to `http://localhost:5173`. API to `http://localhost:8787`.
