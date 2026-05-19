@@ -1,0 +1,11 @@
+# Prerequisites: Docker + Supabase CLI. Run `supabase start` first, then `supabase status` for values.
+# Copy to .dev.vars for local Wrangler dev (`pnpm dev` in api/).
+# Values come from `supabase status` (or `supabase status -o env`) after `supabase start`.
+# For production, set these as Worker secrets in the Cloudflare dashboard (or via wrangler secret).
+
+SUPABASE_URL=http://127.0.0.1:54321
+SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
+
+# Frontend origin for CORS (Vite dev server)
+APP_URL=http://localhost:5173

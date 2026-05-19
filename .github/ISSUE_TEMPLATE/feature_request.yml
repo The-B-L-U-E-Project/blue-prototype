@@ -29,25 +29,6 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: Alternatives considered
-      description: Other approaches you thought about and why they're worse.
-    validations:
-      required: false
-
-  - type: textarea
-    id: principles
-    attributes:
-      label: Principle alignment
-      description: |
-        How does this proposal align with — or risk violating — the
-        non-negotiable principles and UI design principles in
-        CLAUDE.md? Be specific.
-    validations:
-      required: true
-
   - type: dropdown
     id: area
     attributes:
@@ -70,7 +51,5 @@ body:
     attributes:
       label: Confirmations
       options:
-        - label: I searched existing issues and discussions for prior art.
-          required: true
-        - label: This proposal does not introduce paywalls, non-contextual ads, or engagement-optimized UX.
+        - label: I searched existing issues and this is not a duplicate.
           required: true

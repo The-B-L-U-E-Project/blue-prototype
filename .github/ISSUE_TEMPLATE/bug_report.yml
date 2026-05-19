@@ -76,16 +76,6 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: environment
-    attributes:
-      label: Environment
-      description: |
-        OS, browser, Node version, pnpm version, anything else
-        that might matter.
-    validations:
-      required: false
-
   - type: checkboxes
     id: confirm
     attributes:
@@ -93,5 +83,5 @@ body:
       options:
         - label: I searched existing issues and this is not a duplicate.
           required: true
-        - label: This is not a security vulnerability (those go through SECURITY.md).
+        - label: This is not a security vulnerability.
           required: true
