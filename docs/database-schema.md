@@ -1,8 +1,6 @@
 # Database Schema
 
-This document explains the first Supabase schema for BLUE's learning graph. It is an implementation companion to `docs/overall-system.md`, not a replacement for the product model.
-
-The migration is `supabase/migrations/20260521120000_learning_graph.sql`.
+This doc serves as the file for laying out the database schema for this site. This is still a work in progress and is subject to change.
 
 ## Purpose
 
@@ -16,10 +14,7 @@ The schema deliberately keeps the database source of truth small:
 - Store version history for guides, methods, and alternatives.
 - Do not store values that can be derived from the graph.
 
-
-
 ### `guides`
-
 
 Important fields:
 
@@ -36,7 +31,6 @@ Current statuses are:
 - `provisional`
 - `published`
 - `archived`
-
 
 ### `guide_revisions`
 
@@ -107,12 +101,6 @@ Example:
 Guide: Vectors
 Subjects: Math, Physics, Game Development
 ```
-
-### `subject_prerequisite_floors`
-
-A subject may declare floor prerequisites that apply to the subject view without forcing every low-level dependency to appear as ordinary subject content.
-
-This implements the idea from `docs/overall-system.md` that a subject like Physics can have a floor such as Arithmetic and Algebra without bloating the Physics subject page with every primitive dependency.
 
 ### `todo_prerequisites`
 
@@ -190,16 +178,5 @@ The first-pass policy is intentionally conservative:
 
 ## Going forward
 
-Verifier panels, moderator panels, votes, disputes, and publication decisions are not modeled yet. They need their own focused migration after the governance workflow is settled.
-
-This first schema only implements the stable learning graph foundation. Later migrations can add:
-
-- `submissions`
-- `verification_panels`
-- `verification_reviews`
-- `votes`
-- `disputes`
-- saved walkthrough tables
-- completion tracking
-- explicit accepted revision pointers
+Still need to add schemas for moderator panels, votes, disputes, and publication decisions are not modeled yet.
 
