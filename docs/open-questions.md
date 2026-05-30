@@ -8,7 +8,7 @@ Each entry has:
 - **Sebastian's take** — his tentative answer, if any (paraphrased; absence means he explicitly said he didn't know)
 - **Status** — `open` (no answer), `partial` (gestured at, not resolved), `tentative` (his answer exists but he flagged it as a starting point only)
 
-The original mission constraints (free forever, zero prerequisites, one canonical guide, contextual ads only, profit subordinate to mission) live in `CLAUDE.md` and the `README`. Those are non-negotiable. Everything below is.
+The original mission constraints (free forever, zero prerequisites, one canonical guide, contextual ads only, profit subordinate to mission) live in the `README`. Those are non-negotiable. Everything below is.
 
 > **Terminology note.** Sebastian's framing used a single **verifier** role for both pre-publish review and post-publish dispute/oversight. The current system in `[overall-system.md](overall-system.md)` splits these into two roles:
 >
@@ -82,7 +82,7 @@ The original mission constraints (free forever, zero prerequisites, one canonica
 
 - **Q:** Should a high-level verifier automatically be allowed to vote on lower-level content, or must they pass each level's test independently?
 - **Sebastian's take:** **No automatic inheritance.** Expertise at a higher level doesn't imply competence at lower levels.
-- **Status:** resolved (per Sebastian and per `CLAUDE.md`); kept here for traceability.
+- **Status:** resolved (per Sebastian); kept here for traceability.
 
 ### 3.2 Multi-subject verifiers
 
@@ -337,7 +337,7 @@ The original mission constraints (free forever, zero prerequisites, one canonica
 
 - **Q:** BLUE's UI principles forbid gamification (no XP, streaks, dopamine loops). Where do badges fit?
 - **Sebastian's take:** Badges as artifacts of progress, not of engagement. Differentiated by what was earned (Completion, Verifier, Test Maker, Activity), by niche, by level. Designs differ per niche × level.
-- **Status:** **conflict** — needs explicit reconciliation with the "no gamification" UI principle in `CLAUDE.md`.
+- **Status:** **conflict** — needs explicit reconciliation with the "no gamification" UI principle.
 
 ### 11.2 Who designs badges
 

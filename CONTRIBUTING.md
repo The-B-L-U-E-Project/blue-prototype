@@ -2,8 +2,8 @@
 
 Thanks for considering a contribution. BLUE is a free, universally
 accessible learning platform — see [README.md](README.md) for the
-public-facing mission, and [CLAUDE.md](CLAUDE.md) for the operational
-principles that shape every design decision.
+public-facing mission and the principles that shape every design
+decision.
 
 This document covers:
 
@@ -43,13 +43,11 @@ We welcome:
 - Verifier and moderator system design proposals — this is a hard,
 unsolved area; thoughtful prior-art writeups are very welcome
 - Accessibility, internationalization, and low-bandwidth optimizations
-(see UI Design Principles in [CLAUDE.md](CLAUDE.md))
 
 Please **do not** submit:
 
 - Proposals that introduce paywalls, premium tiers, or non-contextual
-advertising. These violate the project's load-bearing principles
-(see [CLAUDE.md](CLAUDE.md) "Non-Negotiable Principles").
+advertising. These violate the project's load-bearing principles.
 - Content scraped from sources that are not compatibly licensed  
 (CC BY-SA 4.0 compatible or your own original work).
 
@@ -81,8 +79,7 @@ The repo is a pnpm workspace:
 
 ### Conventions
 
-The frontend layout is binding — see the "App Structure" section in
-[CLAUDE.md](CLAUDE.md). In short:
+The frontend layout is binding. In short:
 
 - Path alias `@/` maps to `src/`. Always import via `'@/ui'`, not
 `'../../../ui'`.
@@ -112,14 +109,13 @@ in separate PRs. Drive-by cleanups make review harder.
 ## Content contributions (guides, methods, alternatives)
 
 The content pipeline (hierarchy enforcement, verifier juries,
-post-publish moderation, dispute resolution) is still being designed —
-see "Core Mental Model" in [CLAUDE.md](CLAUDE.md). Until the
-in-platform contribution flow exists, the canonical place to propose
+post-publish moderation, dispute resolution) is still being designed.
+Until the in-platform contribution flow exists, the canonical place to propose
 content structure is via issues using the "Guide proposal" template.
 
 When the platform is live, guide, method, and alternative contributions will go
 through the verifier-jury pre-publish review process and the
-vote-based post-publish moderation system described in CLAUDE.md and
+vote-based post-publish moderation system described in
 `docs/overall-system.md`. Repository PRs are not the long-term path
 for content.
 

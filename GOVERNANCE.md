@@ -36,8 +36,7 @@ The list is kept in [`.github/CODEOWNERS`](.github/CODEOWNERS).
 Becoming a maintainer requires:
 
 - A sustained track record of high-quality contributions.
-- Demonstrated alignment with the non-negotiable principles in
-  [CLAUDE.md](CLAUDE.md).
+- Demonstrated alignment with the project's non-negotiable principles.
 - Nomination by an existing maintainer and consensus of current
   maintainers.
 
@@ -53,7 +52,7 @@ months no activity) may be moved to an emeritus list.
   require two maintainer approvals and a public discussion thread
   (GitHub Discussions or issue) open for at least 72 hours.
 - **Principle-affecting changes** (anything that touches the
-  non-negotiable principles in CLAUDE.md, governance, licensing,
+  non-negotiable principles, governance, licensing,
   funding, or the verifier/moderator system design): require a documented
   proposal, public comment period of at least two weeks, and consensus
   of maintainers. The founder retains veto on these during the
@@ -84,4 +83,4 @@ revenue — must be:
 
 A formal nonprofit entity will be established before BLUE accepts
 significant external funding or runs production at scale. Jurisdiction
-is an [open question](CLAUDE.md#open-design-questions).
+is an open question.

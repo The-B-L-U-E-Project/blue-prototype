@@ -14,9 +14,6 @@ body:
         to propose guide structure, prerequisites, and content shape —
         not to submit final prose.
 
-        See "Core Mental Model" in [CLAUDE.md](../blob/main/CLAUDE.md)
-        for the hierarchy / methods / verifier model.
-
   - type: input
     id: subject
     attributes:
@@ -83,7 +80,7 @@ body:
     attributes:
       label: Confirmations
       options:
-        - label: I have read the hierarchy and methods sections of CLAUDE.md.
+        - label: I understand BLUE's hierarchy and methods model.
           required: true
         - label: I will license this content under CC BY-SA 4.0.
           required: true

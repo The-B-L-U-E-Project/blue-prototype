@@ -9,9 +9,8 @@ body:
     attributes:
       value: |
         Please describe the problem first, then the proposal. BLUE
-        is a mission-driven project — see [CLAUDE.md](../blob/main/CLAUDE.md)
-        for the non-negotiable principles. Proposals that violate
-        those principles will not be accepted.
+        is a mission-driven project with non-negotiable principles.
+        Proposals that violate those principles will not be accepted.
 
   - type: textarea
     id: problem

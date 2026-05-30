@@ -78,4 +78,4 @@ supabase/    Migrations and local config.
 docs/        Design notes, open questions.
 ```
 
-See `CLAUDE.md` for project intent and design principles. See `CONTRIBUTING.md` before opening a PR.
+See `CONTRIBUTING.md` before opening a PR.
